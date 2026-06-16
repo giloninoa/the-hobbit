@@ -1,21 +1,256 @@
-<div class="gallery">
-    <div class="painting">
-        <img src="images/cozy-hillside.jpg" alt="A cozy countryside with a round-door cottage">
-        <p>The peaceful beginning of Bilbo's journey.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Cozy Journey Through Middle-earth</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f6f2e8;
+            color: #4a3b2a;
+            line-height: 1.7;
+        }
+
+        header {
+            position: relative;
+            height: 70vh;
+            min-height: 450px;
+            background-image:
+                linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            padding: 20px;
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 700px;
+        }
+
+        nav {
+            background-color: #5d4631;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff8ea;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f6d365;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: #5d4631;
+            margin-top: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .painting {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .painting:hover {
+            transform: translateY(-6px);
+        }
+
+        .painting img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .painting p {
+            padding: 15px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .quote {
+            background: #fff8e7;
+            border-left: 6px solid #d4af37;
+        }
+
+        footer {
+            background-color: #5d4631;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Hobbit</h1>
+    <p>
+        A cozy tale of courage, friendship, and unexpected adventure
+        through the magical lands of Middle-earth.
+    </p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#characters">Characters</a>
+    <a href="#gallery">Illustrations</a>
+    <a href="#quote">Quote</a>
+</nav>
+
+<section>
+
+    <div class="card" id="about">
+        <h2>📖 About the Story</h2>
+
+        <p>
+            <strong>The Hobbit</strong> follows Bilbo Baggins, a comfort-loving
+            hobbit who is swept into an extraordinary quest alongside a band
+            of dwarves and the wizard Gandalf.
+        </p>
+
+        <p>
+            Along the way, Bilbo discovers hidden strengths, faces dangerous
+            creatures, and learns that even the smallest person can change
+            the course of an adventure.
+        </p>
     </div>
 
-    <div class="painting">
-        <img src="images/misty-mountains.jpg" alt="Misty mountains under a dramatic sky">
-        <p>Crossing towering mountains into the unknown.</p>
+    <div class="card" id="characters">
+        <h2>✨ Beloved Characters</h2>
+
+        <ul>
+            <li><strong>Bilbo Baggins</strong> – the unlikely hero.</li>
+            <li><strong>Gandalf</strong> – the wise and mysterious wizard.</li>
+            <li><strong>Thorin Oakenshield</strong> – heir to a lost kingdom.</li>
+            <li><strong>Gollum</strong> – a strange creature with secrets.</li>
+            <li><strong>Smaug</strong> – the dragon guarding a vast treasure.</li>
+        </ul>
     </div>
 
-    <div class="painting">
-        <img src="images/enchanted-forest.jpg" alt="An enchanted forest glowing at dusk">
-        <p>Mysterious forests filled with wonder and danger.</p>
+    <div class="card" id="gallery">
+        <h2>🎨 Storybook Illustrations</h2>
+
+        <div class="gallery">
+
+            <div class="painting">
+                <img
+                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+                    alt="Rolling green hills and peaceful countryside">
+                <p>The peaceful countryside where Bilbo's adventure begins.</p>
+            </div>
+
+            <div class="painting">
+                <img
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                    alt="Towering misty mountains">
+                <p>Crossing majestic mountains into the unknown.</p>
+            </div>
+
+            <div class="painting">
+                <img
+                    src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+                    alt="Enchanted forest path">
+                <p>Mysterious forests filled with wonder and danger.</p>
+            </div>
+
+            <div class="painting">
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                    alt="Golden sunrise over dramatic landscape">
+                <p>The promise of treasure and the end of the journey.</p>
+            </div>
+
+        </div>
     </div>
 
-    <div class="painting">
-        <img src="images/dragon-treasure.jpg" alt="A majestic dragon guarding treasure">
-        <p>The final challenge awaiting brave adventurers.</p>
+    <div class="card quote" id="quote">
+        <h2>🌟 A Memorable Quote</h2>
+
+        <p style="font-size: 1.2rem; font-style: italic;">
+            "There is nothing like looking, if you want to find something."
+        </p>
+
+        <p>— J.R.R. Tolkien</p>
     </div>
-</div>
+
+</section>
+
+<footer>
+    🌿 There and Back Again 🌿
+    <br><br>
+    Made with love for fantasy readers and dreamers.
+</footer>
+
+</body>
+</html>
